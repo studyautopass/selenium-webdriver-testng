@@ -10,23 +10,20 @@ import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-
+//thuytestlan 2
 
 
 public class Topic_01_Check_Environment {
 	WebDriver driver;
 	String projectPath = System.getProperty("user.dir");
-
+	
 	@BeforeClass
 	public void beforeClass() {
 		System.out.print(projectPath);
 		System.setProperty("webdriver.gecko.driver", projectPath + "\\browserDrivers\\geckodriver.exe");
 		driver = new FirefoxDriver();
-		
-
-		
-//		System.setProperty("webdriver.chrome.driver",  projectPath + "\\browserDrivers\\chromedriver.exe");
-//		driver = new ChromeDriver();	
+		//System.out.print("hello Thuy");
+	
 
 		
 
