@@ -61,7 +61,7 @@ public class Topic_02_Selenium_Locator {
 
 	@Test
 	public void TC_05_PartialLinkText() {
-		driver.findElement(By.partialLinkText("account?"));
+		driver.findElement(By.partialLinkText("account?")).click();;
 		sleepInSecond(3);
 				
 	}
