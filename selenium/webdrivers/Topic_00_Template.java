@@ -1,5 +1,4 @@
 package webdrivers;
-
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
@@ -10,8 +9,6 @@ import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-//thuytestlan 2
-
 
 public class Topic_00_Template {
 	//mở trình duyệt
