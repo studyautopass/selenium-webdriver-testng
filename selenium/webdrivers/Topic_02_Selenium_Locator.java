@@ -42,7 +42,6 @@ public class Topic_02_Selenium_Locator {
 	@Test
 	public void TC_02_Class() {
 		driver.findElement(By.className("registration_redesign")).isDisplayed();
-		
 	}
 
 	@Test
@@ -78,7 +77,7 @@ public class Topic_02_Selenium_Locator {
 	public void TC_07_Css() {
 		// css cú pháp thông thường: tagname[attribute= 'value']
 		driver.findElement(By.cssSelector("input[id='identify_email']")).sendKeys("thuyac@gmail.com");
-		sleepInSecond(3);
+		sleepInSecond(3);  
 		
 	}
 
