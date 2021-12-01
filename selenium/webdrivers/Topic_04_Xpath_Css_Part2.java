@@ -13,7 +13,7 @@ import org.testng.annotations.Test;
 public class Topic_04_Xpath_Css_Part2 {
 	//mở trình duyệt
 	WebDriver driver;
-	String projectPath = System.getProperty("user.dir");
+	String projectPath = System.getProperty("user.dir");  
 	
 	@BeforeClass
 	public void beforeClass() {

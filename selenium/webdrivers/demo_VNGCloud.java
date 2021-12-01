@@ -73,7 +73,6 @@ public class demo_VNGCloud {
 		driver.findElement(By.xpath("//a[contains(.,\"Create instance\")]")).click();
 		sleepInSecond(3);
 		
-		
 		//driver.findElement(By.xpath("//div[@id='cssmenu']/ul/li[4]")).click();
 		//driver.findElement(By.xpath("//button[@ng-disabled='disabledInstance']")).click();
 		//driver.findElement(By.xpath("//a[contains(.,'Create instance')]")).click();
