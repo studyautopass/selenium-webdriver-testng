@@ -5,6 +5,7 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Assert;
@@ -17,6 +18,7 @@ import org.testng.annotations.Test;
 public class demo_VNGCloud {
 	WebDriver driver;
 	String projectPath = System.getProperty("user.dir");
+	
 	
 	@BeforeClass
 	public void beforeClass() {
@@ -62,6 +64,7 @@ public class demo_VNGCloud {
 		sleepInSecond(3);
 		
 		
+		
 	}
 	
 	
@@ -70,12 +73,19 @@ public class demo_VNGCloud {
 	public void TC_05_WellcomeServer() {
 		//màn hình overview
 		
-		driver.findElement(By.xpath("//a[contains(.,\"Create instance\")]")).click();
+		//driver.findElement(By.xpath("//a[@href='/servers/list.html']")).click();
+		//WebElement w = 
+		driver.findElement(By.cssSelector(".card-button a[href=\"/servers/list.html\"]")).click();
+//		String f = w.getAttribute("href");
+//		driver.get("https://portal3.vngcloud.vn"+f);
+		
 		sleepInSecond(3);
 		
+		//driver.findElement(By.xpath("button a:contains('Create instance')")).click();
+		//a[@href="/servers/list.html"]
 		//driver.findElement(By.xpath("//div[@id='cssmenu']/ul/li[4]")).click();
 		//driver.findElement(By.xpath("//button[@ng-disabled='disabledInstance']")).click();
-		//driver.findElement(By.xpath("//a[contains(.,'Create instance')]")).click();
+		
 	
 		//sleepInSecond(3);
 		
@@ -101,7 +111,7 @@ public class demo_VNGCloud {
 	//Gọi hàm khác để dùng
 	public void sleepInSecond(long second) {
 		try {
-			Thread.sleep(second * 10);
+			Thread.sleep(second * 1000);
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
