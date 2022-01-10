@@ -1,4 +1,5 @@
 package webdrivers;
+import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
@@ -14,6 +15,8 @@ public class Topic_00_Template {
 	//mở trình duyệt
 	WebDriver driver;
 	String projectPath = System.getProperty("user.dir");
+	
+	
 	
 	@BeforeClass
 	public void beforeClass() {
@@ -59,4 +62,10 @@ public class Topic_00_Template {
 				e.printStackTrace();
 			}
 		}
+			
+			public int getRandomNumber() {
+				Random rd = new Random();
+				return rd.nextInt(1000);
+			}
+		
 }
