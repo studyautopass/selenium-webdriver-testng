@@ -15,7 +15,7 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-public class Topic18_JavaExcutor {
+public class Topic_18_JavaExcutor {
 	//mở trình duyệt
 	WebDriver driver;
 	String projectPath = System.getProperty("user.dir");
