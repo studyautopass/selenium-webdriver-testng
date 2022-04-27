@@ -31,8 +31,8 @@ public class Topic_07_Element {
 	
 }
 
-	@Test
-	public void TC_01() {
+	//@Test
+	public void TC_01_Dislay() {
 		//1. mở app
 		driver.get("https://automationfc.github.io/basic-form/index.html");
 		//Verify txt Email is dispay
@@ -79,15 +79,117 @@ public class Topic_07_Element {
 		} else {
 			System.out.println("name User 5 is not dislay");
 		}
+		driver.close();
 	}
 
-	@Test
-	public void TC_02() {
+	//@Test
+	public void TC_02_Enable() {
+		//1. mở app
+		driver.get("https://automationfc.github.io/basic-form/index.html");
+		//TxtEmail Enable
+		WebElement txtEmail = driver.findElement(By.id("mail"));
+		boolean status = txtEmail.isEnabled();
+		System.out.println(status);
+		if (status) {
+			System.out.println("Email textbox is Enable ");
+		} else {
+			System.out.println("Email textbox is Disable ");
+		}
 		
+		//Age Under 18 enable
+		WebElement radioUnder18 = driver.findElement(By.id("under_18"));
+		boolean status18 = radioUnder18.isEnabled();
+		if (status18) {
+			System.out.println("Under18 radio button is Enable ");
+		} else {
+			System.out.println("Under18 radio button is Disable ");
+		}
+		
+		//Education Enable
+		WebElement Education = driver.findElement(By.id("edu"));
+		boolean statusedu = Education.isEnabled();
+		if (statusedu) {
+			System.out.println("Textarea Education is Enable");
+		} else {
+			System.out.println("Textarea Education is Disable");
+		}
+		
+		//Job role01/ role02
+		WebElement role1 = driver.findElement(By.id("job1"));
+		boolean statusrole = role1.isEnabled();
+		if (statusrole) {
+			System.out.println("Role1 Dropdown list is Enable");
+		} else {
+			System.out.println("Role1 Dropdown list is Disable");
+		}
+		
+		
+		//Slider 01
+		WebElement slide1 = driver.findElement(By.id("slider-1"));
+		boolean statusslide = slide1.isEnabled();
+		if (statusslide) {
+			System.out.println("Slider1 is Enable");
+		} else {
+			System.out.println("Slider1 is Disable");
+		}
+		//Interest Checkbox
+		WebElement edevelop = driver.findElement(By.xpath("//input[@id='development']"));
+		boolean statusede = edevelop.isEnabled();
+		if (statusede) {
+			System.out.println("Edevelopment checkbox is Enable");
+			
+		} else {
+			System.out.println("Edevelopment checkbox is Disable");
+		}	
+		
+		//Password
+		WebElement pass = driver.findElement(By.xpath("//input[@id='password']"));
+		
+		if (pass.isEnabled()) {
+			System.out.println("Password Texbox is Enable");
+		} else {
+			System.out.println("Password Texbox is Disable");
+		}
+		driver.quit();
 	}
+		
 
 	@Test
-	public void TC_03() {
+	public void TC_03_Selected() {
+		driver.get("https://automationfc.github.io/basic-form/index.html");		
+		//radio under18
+		WebElement under18 = driver.findElement(By.id("under_18"));
+		under18.click();
+		if (under18.isSelected()) {
+			System.out.println("Under18 radio button is Selected");
+		} else {
+			System.out.println("Under18 radio button is de-selected");
+		}
+		//javacheckbox
+		WebElement javacheckbox = driver.findElement(By.xpath("//input[@id='java']"));
+		javacheckbox.click();
+		if (javacheckbox.isSelected()) {
+			System.out.println("Java checkbox is Selected");
+		} else {
+			System.out.println("Java checkbox is de-selected");
+		}
+		javacheckbox.click();
+		if (javacheckbox.isSelected()) {
+			System.out.println("Java checkbox is Selected");
+		} else {
+			System.out.println("Java checkbox is de-selected");
+		}
+		
+		
+		
+			
+			
+			
+				
+	}
+	
+	@Test
+	public void TC_04() {
 		
 	}
 

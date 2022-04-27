@@ -36,25 +36,13 @@ public class demo_VNGCloud {
 }
 
 	@Test
-	public void TC_01_username() {
+	public void TC_01_Login() {
 		driver.findElement(By.id("username")).sendKeys("iaas.qc2@vng.com.vn");
-		sleepInSecond(3);
-	}
-		
-	
-	
-	@Test
-	public void TC_02_password() {
-		driver.findElement(By.id("password")).sendKeys("12345678@Aa");;
-		sleepInSecond(3);
-	}
-
-	@Test
-	public void TC_03_Login() {
-		
+		driver.findElement(By.id("password")).sendKeys("12345678@Aa");
 		driver.findElement(By.xpath("//input[@value='Login']")).click();
 		sleepInSecond(3);
 	}
+	
 	
 	@Test
 	public void TC_04_Server() {
@@ -71,15 +59,11 @@ public class demo_VNGCloud {
 	
 	@Test	
 	public void TC_05_WellcomeServer() {
-		//màn hình overview
-		
-		//driver.findElement(By.xpath("//a[@href='/servers/list.html']")).click();
-		//WebElement w = 
-		driver.findElement(By.cssSelector(".card-button a[href=\"/servers/list.html\"]")).click();
-//		String f = w.getAttribute("href");
-//		driver.get("https://portal3.vngcloud.vn"+f);
-		
-		sleepInSecond(3);
+		sleepInSecond(5);
+		//driver.findElement(By.cssSelector(".card-button a[href='/servers/list.html']")).click();
+		driver.findElement(By.cssSelector("//button[@class='btn nobg in-row btn-new']//i[@class='vdicon icon-new-instance']")).click();
+//		
+		sleepInSecond(5);
 		
 		//driver.findElement(By.xpath("button a:contains('Create instance')")).click();
 		//a[@href="/servers/list.html"]
@@ -91,7 +75,7 @@ public class demo_VNGCloud {
 		
 	}
 	
-	@Test
+	//@Test
 	public void TC_06_CreateServer() {
 		//Chọn click Tạo Server
 		

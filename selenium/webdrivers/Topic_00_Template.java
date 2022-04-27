@@ -29,8 +29,6 @@ public class Topic_00_Template {
 	driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 	driver.manage().window().maximize();
 	
-	//mở app
-	driver.get("https://www.facebook.com/");
 	
 }
 

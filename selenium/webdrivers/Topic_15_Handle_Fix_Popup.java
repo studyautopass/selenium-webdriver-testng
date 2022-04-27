@@ -13,7 +13,7 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-public class Topic_15_Handle_Popup {
+public class Topic_15_Handle_Fix_Popup {
 	//mở trình duyệt
 	WebDriver driver;
 	String projectPath = System.getProperty("user.dir");

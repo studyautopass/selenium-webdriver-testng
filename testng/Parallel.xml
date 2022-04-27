@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite  name="thuytest" parallel="tests" threat-count ="4">
+
+
+
+
+  <test name="First Test">
+    <classes>
+    <class name = "parallel.Topic_01_FirstClass"/>
+    <class name = "parallel.Topic_02_SecondClass"/>
+    
+    </classes>
+ 
+  </test>
+  
+    <test name="Second Test">
+    <classes>
+    <class name = "parallel.Topic_03_ThirdClass"/>
+    <class name = "parallel.Topic_04_FourClass"/>
+    
+    </classes>
+ 
+  </test>
+  
+  
+  
+  
+</suite> <!-- Suite -->
